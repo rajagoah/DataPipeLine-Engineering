@@ -1,0 +1,11 @@
+Building data pipeline using python
+
+1. Data sources		--> operational data bases that store transactions
+2. Target areas 	--> a collection of databases called data lakes
+3. Data lakes 		--> consist of 3 main regions:
+				a. Landing area 	--> area of truth. This is where data is stored as it is received
+				b. Clean area		--> area where clean area resides
+				c. Business area	--> area where special transformations are applied to data to match the domain requirement
+4. A data lake is usually in the form of a FILE MANAGEMENT SYSTEM -- Unix / Linux / DOS etc..
+5. DATA CATALOG 	--> To navigate a data lake, sometimes organisations provide DATA CATALOGS. This stores information on where the data resides and the format in which the data is being stored.
+6. SPARK DATAFRAME 	--> Spark data frame is a distributed collection of data. They are often used for big data
