@@ -9,3 +9,16 @@ Building data pipeline using python
 4. A data lake is usually in the form of a FILE MANAGEMENT SYSTEM -- Unix / Linux / DOS etc..
 5. DATA CATALOG 	--> To navigate a data lake, sometimes organisations provide DATA CATALOGS. This stores information on where the data resides and the format in which the data is being stored.
 6. SPARK DATAFRAME 	--> Spark data frame is a distributed collection of data. They are often used for big data
+7. SINGER		--> Data ingestion specification
+				a. Data ingestion script --> tap
+				b. Data load script --> target
+				c. They communicate via:
+					-- schema (table meta data)
+					-- stream (process meta data)
+					-- records (data)
+				d. Data exchange format --> JSON
+
+JSON --
+	javascript object notation
+	syntax for storing and exchanging data
+	
