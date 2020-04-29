@@ -43,4 +43,7 @@ Running an ingestion pipeline with Singer
 1. To generate a singer record, we called the write_record() function
 2. When we combine the 'write_schema' and 'write_record' functions, we have a tap module in python which outputs to the console.
 3. If we have a target that can parse this tap output, we have a full ingestion pipeline.
+
+Getting data in to data lake
+1. With the boom of IoT, interacting with web API is becoming a common way to ingest data in to the data lake. Need to do further study in to this.
 					
