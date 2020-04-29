@@ -20,6 +20,26 @@ sg.write_schema(stream_name="user_stream",schema=json, key_properties = ["id"])
 #creating a record using the write_record() function
 sg.write_record(stream_name='user_stream',record=dict(zip(cols, users.pop())))
 
+#practicing the dict() constructor
+nums = dict(x=1,y=2)
+print(type(nums))
+print(nums)
+
+#creating a dictionary using iteratable
+nums1 = dict([('x',5),('y',4)])
+print(nums1)
+
+nums2 = dict([('x',3),('y',6)],z=7)
+print(nums2)
+
+nums3 = list(zip(['x','y','z'],[1,3,5]))
+print(nums3)
+print(dict(nums3))
+
+nums4 = dict(zip(['p','q','r'],[6,8,0]))
+print(nums4)
+
+"""
 #exploring the data types of the variables declared above
 #note that since the below variable is a set data type, we must remember that we cant slice a set.
 #when we use the next() operator along with iter() operator on the users, the elements will be output
@@ -53,4 +73,4 @@ schema = {'properties': {
 
 # Write the schema
 sg.write_schema(stream_name='products', schema=schema, key_properties=[])
-print('writing done')
+print('writing done')"""
