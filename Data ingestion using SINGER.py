@@ -1,5 +1,8 @@
 #importing package to create a JSON
 import singer as sg
+
+########################################### PRACTICE CODE ###########################################
+"""
 #practicing the dict() constructor
 nums = dict(x=1,y=2)
 print(type(nums))
@@ -30,25 +33,6 @@ print(dict(zip(qwe,asd.pop())))
 # Since the pop() method removes elements randomly, the q,t,z may get matched to any of the 3 elements of the set <asd>
 cols = ("id","name","age")
 
-users = {(1,"ar",32),
-         (2,"sr",31),
-         (3,"rr",33 )}
-json = {"properties" :
-            {
-                "id" : {"type":"integer"},
-                "name" : {"type":"string"},
-                "age"  : {"type":"integer"}
-            }
-        }
-
-#the write schema method converts the above JSON into a schema
-sg.write_schema(stream_name="user_stream",schema=json, key_properties = ["id"])
-
-#creating a record using the write_record() function
-sg.write_record(stream_name='user_stream',record=dict(zip(cols, users.pop())))
-
-
-"""
 #exploring the data types of the variables declared above
 #note that since the below variable is a set data type, we must remember that we cant slice a set.
 #when we use the next() operator along with iter() operator on the users, the elements will be output
@@ -61,3 +45,39 @@ print("cols is: ", type(cols))
 print("accessing all element of tuple using list's index notation", cols[0:3])
 
 print("json is: ", type(json))"""
+########################################### PROJECT CODE ###########################################
+
+#practing the use of singer package to create a tap
+
+#creating a header that will serve as keys
+cols = ['id','name','age']
+
+#data to be popualted as records to the tap
+users = {(1,"ar",32),
+         (2,"sr",31),
+         (3,"rr",33 )}
+
+#schema that defines the structure of data storage
+json = {"properties" :
+            {
+                "id" : {"type":"integer"},
+                "name" : {"type":"string"},
+                "age"  : {"type":"integer"}
+            }
+        }
+
+#converting the users and cols to 1 combined dictionary
+comb_dict = dict(zip(cols, users.pop()))
+print("combined dictionary is: ", comb_dict)
+
+#write_schema() function call
+sg.write_schema(stream_name="user_stream",schema=json,key_properties=["id"])
+
+#write_record() function call
+sg.write_record(stream_name="user_stream",record=comb_dict)
+
+#write_records() function call to map multiple records
+sg.write_records(stream_name="user_srteam",records=comb_dict)
+
+
+
