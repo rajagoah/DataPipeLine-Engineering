@@ -47,3 +47,9 @@ Running an ingestion pipeline with Singer
 Getting data in to data lake
 1. With the boom of IoT, interacting with web API is becoming a common way to ingest data in to the data lake. Need to do further study in to this.
 					
+
+REST
+REST is essentially a set of useful conventions for structuring a web API
+	Web API 	--> it is an application interface that you use to interact with a web URL, to get relevant data in return 
+	GET method	--> Get method is used to get some information about an object in the website. Get method is not expected to make any change to that information
+	POST method	--> Post method in contrast allows us to make change to the data. 
