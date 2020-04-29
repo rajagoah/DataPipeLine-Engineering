@@ -17,6 +17,9 @@ json = {"properties" :
 #the write schema method converts the above JSON into a schema
 sg.write_schema(stream_name="user_stream",schema=json, key_properties = ["id"])
 
+#creating a record using the write_record() function
+sg.write_record(stream_name='user_stream',record=dict(zip(cols, users.pop())))
+
 #exploring the data types of the variables declared above
 #note that since the below variable is a set data type, we must remember that we cant slice a set.
 #when we use the next() operator along with iter() operator on the users, the elements will be output
