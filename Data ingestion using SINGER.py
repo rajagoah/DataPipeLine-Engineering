@@ -19,12 +19,15 @@ print(dict(nums3))
 nums4 = dict(zip(['p','q','r'],[6,8,0]))
 print(nums4)
 
-qwe = ['q','w','e']
+qwe = ('q','t','z')
 asd = {(1,2,3),(4,5,6),(7,8,9)}
-
+print(asd.pop())
 print(dict(zip(qwe,asd.pop())))
 
-#--
+#understood the nuances of using pop() method with the zip() method. the difference in the way the two iterators get mapped.
+#--the pop() method removes and outputs an elements from the set in random order.
+# additionally, it maps each element in tuple <qwe> to each element enclosed in parenthesis within the set <asd>.
+# Since the pop() method removes elements randomly, the q,t,z may get matched to any of the 3 elements of the set <asd>
 cols = ("id","name","age")
 
 users = {(1,"ar",32),
