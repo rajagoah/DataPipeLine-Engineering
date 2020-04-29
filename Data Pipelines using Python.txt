@@ -22,3 +22,20 @@ JSON --
 	javascript object notation
 	syntax for storing and exchanging data
 	
+JSON package in python
+
+1. You can use the methods within the json package by invoking the package name
+	import json
+
+2. To serialise a JSON you can do it 2 manners. 
+	a. By using the .dump() method. To use this, we must use the following syntax.
+		
+		EXAMPLE: 
+		with open("data_file.json","w") as write_file:
+			json.dump( obj = "<name of JSON variable in the computer memory between double quotes>",
+				   fp  = "<name of the file the value within the JSON variable will be serialised. In this case it is write_file>")
+	b, By using the .dumps() method. This method makes the code easier to read and implicitly performs the above steps.
+		EXAMPLE:
+		json_string = json.dumps(obj = "name of JSON variable",
+					 fp = "write_file")		
+					
