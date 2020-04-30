@@ -1,0 +1,19 @@
+{
+    "properties": {
+        "firstName": {
+            "type": "string"
+        },
+        "lastName": {
+            "type": "string"
+        },
+        "hobbies": {
+            "type": []
+        },
+        "age": {
+            "type": "integer"
+        },
+        "children": {
+            "type": []
+        }
+    }
+}
