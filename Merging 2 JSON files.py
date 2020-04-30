@@ -19,8 +19,22 @@ with open("data_file_merge.json", "w") as wf:
 
 ### USING THE NON PACKAGE METHOD TO MERGE JSONS
 #use the load() function to deserialize the JSON
+
+#first wrting these two json variables to file
+#writing json1 to file
+with open("json1.json","w") as write_file:
+    json.dump(json1, write_file)
+
+#writing json2 to file
+with open("json2.json","w") as write_file:
+    json.dump(json2, write_file)
+print("write to file process complete")
+
+#initialising an empty list
 result = []
-for file in glob.glob("*.json"):
+
+#looping through the file in the project location
+for file in glob.glob("json*.json"):
     with open(file, "r") as infile:
         result.append(json.load(infile))
 
