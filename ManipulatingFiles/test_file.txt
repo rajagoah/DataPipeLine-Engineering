@@ -1,0 +1,2 @@
+first text to be written to the file
+second text to be written
