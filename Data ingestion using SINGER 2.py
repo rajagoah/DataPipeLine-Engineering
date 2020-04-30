@@ -43,10 +43,36 @@ print("the serialised string version of the JSON is: \n", json_string)
 json_string = json.dumps(json_schema, indent=2)
 print("the serialised string version with indent is: \n", json_string)
 
+#using the separators keyword argument in dump() function, to specify an alternate separator
+#using ("," , ":") as separator
+json_string = json.dumps(json_schema, indent=4, separators=(",",":"))
+print("""the serialised string version with indent and separators as ("," , ":")is: \n""", json_string)
+
+#using (", ", ": ") as separator
+json_string = json.dumps(json_schema, indent= 4, separators= (", " , ": "))
+print("""the serailised string version with indent and separator as  (", " , ": ") \n""", json_string )
+
 #using json.dump() function
+comment = {"comment" : " {************************THIS IS A DEMO OF json.dump() FUNCTION LOOKS LIKE************************}\n"}
 with open("data_file.json", "w") as write_file:
+    json.dump(comment, write_file)
     json.dump(json_schema, write_file)
 
 #using json.dump() function with the indent keyword
+comment = {"comment" : " {************************THIS IS A DEMO OF WHAT USING INDENT KEYWORD ARGUMENT LOOKS LIKE************************}\n"}
 with open("data_file.json","w") as write_file:
+    json.dump(comment, write_file)
     json.dump(json_schema, write_file, indent=4)
+
+#using separtors key word with value as (", " , ": ")
+comment = {"comment" : "{************************THIS IS A DEMO OF WHAT USING SEPARATORS = (", " , ": ") LOOKS LIKE************************}\n"}
+with open("data_file.json","w") as write_file:
+    json.dump(comment, write_file)
+    json.dump(json_schema, write_file, indent= 4, separators= (", " , ": "))
+
+#using the separtors key word with value s ("," , ":")
+comment = {"comment" : """{************************THIS IS A DEMO OF WHAT USING SEPARATORS = ("," , ":") LOOKS LIKE************************}\n"""}
+with open("data_file2.json","w") as write_file:
+    json.dump(comment, write_file)
+    json.dump(json_schema, write_file, indent= 4, separators = ("," , ":"))
+
