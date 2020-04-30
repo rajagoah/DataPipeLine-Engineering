@@ -1,0 +1,19 @@
+{"comment": "{************************THIS IS A DEMO OF WHAT USING SEPARATORS = (\",\" , \":\") LOOKS LIKE************************}\n"}{
+    "properties":{
+        "firstName":{
+            "type":"string"
+        },
+        "lastName":{
+            "type":"string"
+        },
+        "hobbies":{
+            "type":[]
+        },
+        "age":{
+            "type":"integer"
+        },
+        "children":{
+            "type":[]
+        }
+    }
+}
