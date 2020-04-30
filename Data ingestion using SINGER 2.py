@@ -30,3 +30,6 @@ json_schema = {"properties":
 
 #write_schema() function call
 sg.write_schema(stream_name= 'candidate_stream', schema=json_schema, key_properties=[])
+
+#write_records() function call
+sg.write_record(stream_name= 'candidate_stream', record= candidate)
