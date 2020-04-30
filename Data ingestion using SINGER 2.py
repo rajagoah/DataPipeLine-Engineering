@@ -1,4 +1,5 @@
 import singer as sg
+import json
 
 candidate ={
                 "firstName": "Jane",
@@ -33,3 +34,10 @@ sg.write_schema(stream_name= 'candidate_stream', schema=json_schema, key_propert
 
 #write_records() function call
 sg.write_record(stream_name= 'candidate_stream', record= candidate)
+
+#using json.dumps() function
+json.dumps(json_schema)
+
+#using json.dump() function
+with open("data_file.json", "w") as write_file:
+    json.dump(json_schema, write_file)
