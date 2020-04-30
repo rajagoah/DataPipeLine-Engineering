@@ -1,1 +1,8 @@
-[{"comments": "this is a comment"}, {"body": "this is the body of the json"}]
+[
+    {
+        "comments": "this is a comment"
+    },
+    {
+        "body": "this is the body of the json"
+    }
+]
