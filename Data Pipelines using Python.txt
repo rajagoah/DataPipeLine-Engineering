@@ -84,5 +84,11 @@ CLOSING FILE
 
 WRITING TO A FILE
 1. Done in the following manner:
-	a. file_txt.write(" test string ")
-	b. file_txt.writelines(l) for l = ["string1", "string2", "string3"]	// unable to test it out. Research more
+	a. write() 	--> file_txt.write(" test string ")
+	b. witelines() 	--> file_txt.writelines(l) for l = ["string1", "string2", "string3"]	// unable to test it out. Research more
+
+READING FROM A FILE
+1. Done in the following manner 
+	a. read()	--> optional argument 'n'. The n refers to the number of bytes that the user is asking the program to read. If no value is provided, the entire file is read.
+	b. readline()	--> optional argument 'n'. The n refers to the number of bytes that the user is asking the program to read. Even if the value of 'n' is greater than the number of Bytes on that 			    line, it will only return what is written in 1 line.
+	c. readlines()	--> option argument 'n'. The n refers to the number of bytes that the user is asking the program to read. Returns a single line result, in the form of a list
