@@ -26,6 +26,20 @@ JSON package in python
 
 1. You can use the methods within the json package by invoking the package name
 	import json
+2. The process of encoding a JSON is called Serialisation. The reverse process is called Deserialisation.
+
+
+WRITING to FILES
+Different modes of opening files
+1. "w"	--> WRITE ONLY. If file present then truncates data. If file not present then the file is created. The cursor is placed at the beginning of the file.
+2. "w+"	--> WRITE AND READ. If file present then truncates data. If file not present then the file is created. The cursor is placed at the beginning of the file.
+3. "r"	--> READ ONLY. If file not present then throws I/o error. This is the default mode when the file is opened. The cursor is placed at the beginning of the file.
+4. "r+"	--> READ AND WRITE. The cursor is placed at the beginning of the file
+5. "a"	--> APPEND ONLY. If file not present, then creates one. If file is present then the cursor goes to the end of the file. Any new entries appended immediately after the existing data.
+6. "a+"	--> APPEND AND READ. If file not present, then creates one. If file is present then the cursor goes to the end of the file. Any new entries appended to the bottom of the file 
+
+
+
 
 2. To serialise a JSON you can do it 2 manners. 
 	a. By using the .dump() method. To use this, we must use the following syntax.
