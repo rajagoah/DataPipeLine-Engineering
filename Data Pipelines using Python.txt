@@ -66,3 +66,23 @@ Different modes of opening files
 4. "r+"	--> READ AND WRITE. The cursor is placed at the beginning of the file
 5. "a"	--> APPEND ONLY. If file not present, then creates one. If file is present then the cursor goes to the end of the file. Any new entries appended immediately after the existing data.
 6. "a+"	--> APPEND AND READ. If file not present, then creates one. If file is present then the cursor goes to the end of the file. Any new entries appended to the bottom of the file 
+
+OPENING FILE
+1. For opening a file, we use the open() module. No external package is required for using this functionality.
+2. File should exist in the same directory as the python code. 
+3. 'r' is placed before the name/path of the file, to prevent the program from treating the characters within that string as special characters.
+4. Essentially it tells the program that the string has no special characters. Tells it consider the string as a raw string.
+	example:
+	file_text = open(r"c:/temp/data_file.txt","w")
+
+CLOSING FILE
+1. For closing the file, close() function is used.
+	example:
+	file_txt = open(r"c:/temp/data_file.txt","w")
+	print("file opened")
+	file_txt.close()
+
+WRITING TO A FILE
+1. Done in the following manner:
+	a. file_txt.write(" test string ")
+	b. file_txt.writelines(l) for l = ["string1", "string2", "string3"]	// unable to test it out. Research more
