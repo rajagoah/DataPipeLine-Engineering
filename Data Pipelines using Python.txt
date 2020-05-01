@@ -1,4 +1,4 @@
-Building data pipeline using python
+*************************************************BUILDING DATA PIPELINE USING PYTHON*************************************************
 
 1. Data sources		--> operational data bases that store transactions
 2. Target areas 	--> a collection of databases called data lakes
@@ -18,7 +18,8 @@ Building data pipeline using python
 					-- records (data)
 				d. Data exchange format --> JSON
 
-JSON --
+************************************************* JSON *************************************************
+
 	javascript object notation
 	syntax for storing and exchanging data
 	
@@ -28,20 +29,7 @@ JSON package in python
 	import json
 2. The process of encoding a JSON is called Serialisation. The reverse process is called Deserialisation.
 
-
-WRITING to FILES
-Different modes of opening files
-1. "w"	--> WRITE ONLY. If file present then truncates data. If file not present then the file is created. The cursor is placed at the beginning of the file.
-2. "w+"	--> WRITE AND READ. If file present then truncates data. If file not present then the file is created. The cursor is placed at the beginning of the file.
-3. "r"	--> READ ONLY. If file not present then throws I/o error. This is the default mode when the file is opened. The cursor is placed at the beginning of the file.
-4. "r+"	--> READ AND WRITE. The cursor is placed at the beginning of the file
-5. "a"	--> APPEND ONLY. If file not present, then creates one. If file is present then the cursor goes to the end of the file. Any new entries appended immediately after the existing data.
-6. "a+"	--> APPEND AND READ. If file not present, then creates one. If file is present then the cursor goes to the end of the file. Any new entries appended to the bottom of the file 
-
-
-
-
-2. To serialise a JSON you can do it 2 manners. 
+3. To serialise a JSON you can do it 2 manners. 
 	a. By using the .dump() method. To use this, we must use the following syntax.
 		
 		EXAMPLE: 
@@ -67,3 +55,14 @@ REST is essentially a set of useful conventions for structuring a web API
 	Web API 	--> it is an application interface that you use to interact with a web URL, to get relevant data in return 
 	GET method	--> Get method is used to get some information about an object in the website. Get method is not expected to make any change to that information
 	POST method	--> Post method in contrast allows us to make change to the data. 
+
+
+************************************************* WRITING to FILES *************************************************
+
+Different modes of opening files
+1. "w"	--> WRITE ONLY. If file present then truncates data. If file not present then the file is created. The cursor is placed at the beginning of the file.
+2. "w+"	--> WRITE AND READ. If file present then truncates data. If file not present then the file is created. The cursor is placed at the beginning of the file.
+3. "r"	--> READ ONLY. If file not present then throws I/o error. This is the default mode when the file is opened. The cursor is placed at the beginning of the file.
+4. "r+"	--> READ AND WRITE. The cursor is placed at the beginning of the file
+5. "a"	--> APPEND ONLY. If file not present, then creates one. If file is present then the cursor goes to the end of the file. Any new entries appended immediately after the existing data.
+6. "a+"	--> APPEND AND READ. If file not present, then creates one. If file is present then the cursor goes to the end of the file. Any new entries appended to the bottom of the file 
