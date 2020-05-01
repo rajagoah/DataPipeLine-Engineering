@@ -1,25 +1,23 @@
-
-#declaring the first variable to store what is going to be written in to the file
-test_string = "first text to be written to the file\n"
+#####
+#writing in to the file
+str = ("this is delhi \n", "this is paris \n", "this is new york \n")
 
 test_file = open("test_file.txt","w+")
-test_file.write(test_string)
-print("write operation complete")
-test_file.close()
+test_file.write("hello \n")
+test_file.writelines(str)
 
-test_file = open("test_file.txt", "r")
-print(test_file.read())
-test_file.close()
+#returning the cursor to the start of the file
+test_file.seek(0)
 
-#appending to the end of the above file
-test_file = open("test_file.txt","a+")
-test_string_2 = "second text to be written\n"
+#reading the content of the file
+print(test_file.read(20))
 
-test_file.write(test_string_2)
+#returning the cursor to the start of the file
+test_file.seek(0)
+print(test_file.readline())
+test_file.seek(0)
+print(test_file.readline(50))
 
-#using loop to read contents of a file
-test_file = open("test_file.txt","r")
-i = 1
-for f in test_file:
-    print("the ",i,"st line is --> ",f)
-    i+=1
+#returning the cursor to the start of the file
+test_file.seek(0)
+print(test_file.readlines(50))
