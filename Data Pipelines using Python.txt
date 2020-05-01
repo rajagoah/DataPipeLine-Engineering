@@ -19,9 +19,8 @@
 				d. Data exchange format --> JSON
 
 ************************************************* JSON *************************************************
-
-	javascript object notation
-	syntax for storing and exchanging data
+javascript object notation
+syntax for storing and exchanging data
 	
 JSON package in python
 
@@ -29,7 +28,8 @@ JSON package in python
 	import json
 2. The process of encoding a JSON is called Serialisation. The reverse process is called Deserialisation.
 
-3. To serialise a JSON you can do it 2 manners. 
+SERIALISATION 
+To serialise a JSON you can do it 2 manners. 
 	a. By using the .dump() method. To use this, we must use the following syntax.
 		
 		EXAMPLE: 
@@ -40,6 +40,21 @@ JSON package in python
 		EXAMPLE:
 		json_string = json.dumps(obj = "name of JSON variable",
 					 fp = "write_file")
+CONTEXT MANAGERS
+1. Context managers allow you to allocate and release resources as you wish.
+2. Usually starts with a WITH clause
+	example
+		with open("data_file.txt","w") as write_file:
+			write_file.write("hello")
+
+DESERIALIZATION
+1. The process of loading JSON data from memory is called deserialisation
+2. Done with the help of a context manager
+	example
+		with open("data_file.json", "r") as read_file:
+			data = json.load(read_file)
+		print(data)
+
 
 Running an ingestion pipeline with Singer 		
 1. To generate a singer record, we called the write_record() function
