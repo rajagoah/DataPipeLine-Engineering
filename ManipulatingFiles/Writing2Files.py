@@ -2,7 +2,7 @@
 #writing in to the file
 str = ("this is delhi \n", "this is paris \n", "this is new york \n")
 
-test_file = open("test_file.txt","w+")
+test_file = open("test_file.txt","a+")
 test_file.write("hello \n")
 test_file.writelines(str)
 
@@ -21,3 +21,9 @@ print(test_file.readline(50))
 #returning the cursor to the start of the file
 test_file.seek(0)
 print(test_file.readlines(50))
+
+#testing the appending property of the access mode
+print("fresh line to be appended")
+
+test_file.seek(0)
+print(test_file.read())
