@@ -46,6 +46,10 @@ for i in key:
     else:
         key.remove(i)
 
+#sorting the key list
+key.sort()
+
+#outputing the list
 print("the user having completed the most tasks is: ", key)
 
 
