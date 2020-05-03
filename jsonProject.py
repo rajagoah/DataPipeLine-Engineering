@@ -25,13 +25,25 @@ print(user_cnts_dic)
 #now finding out the user id that have the max count
 
 max_v   = 0  #to hold the value of the value at that instance in the iteration
-key = []      #to hold the value of the key at that instance in the iteration. This value of the Key will correspond the value being iterated over.
+prev_v  = 0
+key     = []      #to hold the value of the key at that instance in the iteration. This value of the Key will correspond the value being iterated over.
 for k,v in user_cnts_dic.items():
     if int(v) >= max_v:
-        max_v = int(v)
+        max_v  = int(v)
         key.append(k)
     else:
         continue
+
+#logic to evaluate that all the elements in the key list are actaully valid ones
+max_v   = user_cnts_dic[key[1]]
+prev_v  = 0
+key.reverse()
+for i in key:
+    if user_cnts_dic[i] >= max_v:
+        max_v = user_cnts_dic[i]
+        continue
+    else:
+        key.remove(i)
 
 print("the user having completed the most tasks is: ", key)
 
