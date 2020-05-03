@@ -34,7 +34,8 @@ for k,v in user_cnts_dic.items():
     else:
         continue
 
-#logic to evaluate that all the elements in the key list are actaully valid ones
+#logic to remove the [1] from the key list created above.
+# If you study the keys copied in to the key list, you will notice that [1] is the incorrect entry
 max_v   = user_cnts_dic[key[1]]
 prev_v  = 0
 key.reverse()
